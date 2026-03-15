@@ -1,0 +1,63 @@
+.statusContener{
+    width: 1140px;
+    height: 554px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    position: relative;
+    left: 150px;
+    top: 140px;
+}
+.statusDivQ{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+left: 77px;
+top: 40px;
+}
+.statusDivW{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+top: 40px;
+left: 425px;
+}
+.statusDivE{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+top: 40px;
+left: 773px;
+}
+.statusDivR{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+top: 297px;
+left: 77px;
+}
+.statusDivT{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+top: 297px;
+left: 425px;
+}
+.statusDivY{
+width: 290px;
+height: 217px;
+background-color: #D9D9D9 ;
+border-radius: 10px;
+position: absolute;
+top: 297px;
+left: 773px;
+}

@@ -5,53 +5,64 @@
    background-position: 50% 70%;
    display: flex;
    flex-direction: column;
+   position: relative;
 }
 .input{
-    width: 580px;
+    width: 625px;
     height: 42px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
     background-color: #D9D9D9;
     color: #D9D9D9;
-    margin-left: 407px;
-    margin-top: 
+    position: absolute;
+    left: 407px;
+    top: 453px;
 }
-.glass-div{
+.glass-bth{
 width: 45px;
-height: 42px;
+height: 45px;
 background-color: #FFB36C;
-
-margin-left: 996px;
-margin-bottom: 100px;
+position: absolute;
+top: 453px;
+left: 987px;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
 }
 .search{
     width: 25px;
     height: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
 }
 .title{
 width: 411px;
 height: 49px;
 color: #FFFFFF;
-margin-left: 514px;
-margin-top: 100px;
+position: absolute;
+left: 514px;
+top: 100px;
 }
 .text1{
 width: 345px;
 height: 87px;
 color: #FFFFFF;
-margin-left: 323px;
+position: absolute;
+left: 323px;
+top: 229px;
 }
 .text2{
 width: 164px;
 height: 58px;
 color: #FFFFFF;
-margin-left: 772px;
-
+position: absolute;
+left: 772px;
+top: 229px;
 }
 .line{
-width: 144px;
-height: 0;
+width: 2px;
+height: 144px;
 background-color: #FFFFFF;
+position: absolute;
+left: 720px;
+top: 229px;
 }

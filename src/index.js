@@ -4,6 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header';
 import Nav from './components/nav/Nav';
+import Card from './components/weather-card/Card';
+import Weather from './components/weatherStats/Weater';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +13,8 @@ root.render(
     
     <Header/>
     <Nav/>
+    <Card/>
+    <Weather/>
   </React.StrictMode>
 );
 

@@ -1,0 +1,105 @@
+.card{
+    width: 320px;
+    height: 430px;
+    display: flex;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    position: relative;
+    top: 60px;
+    left: 150px;
+}
+
+.city{
+  width: 52px;
+  height: 17px;  
+  position: absolute;
+
+}
+.country{
+    width: 110px;
+    height: 17px;
+    position: absolute;
+}
+.more{
+   width: 99px;
+   height: 28px; 
+   border-radius: 10px;
+   border: 0;
+   background-color: #FFB36C;
+   position: absolute;
+   left: 134px;
+   top: 381px;
+}
+.hourly{
+    width: 114px;
+    height: 28px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #FFB36C;
+    position: absolute;
+    left: 32px;
+    top: 86px;
+}
+.weekly{
+    width: 117px;
+    height: 28px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #FFB36C;
+    position: absolute;
+    left: 171px;
+    top: 86px;
+}
+.return{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 380px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: #E8E8E8;
+}
+.like{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 66px;
+    top: 380px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: #E8E8E8;
+}
+.del{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 270px;
+    top: 380px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: #E8E8E8;
+}
+.returnimg{
+
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0.1px;
+   
+}
+.likeimg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0.1px;
+}
+.delimg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0.1px;
+}
