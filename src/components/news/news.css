@@ -1,0 +1,43 @@
+.infoDiv{
+    display: flex;
+    flex-direction: column;
+}
+.infoP{
+    width: 253px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 80px;
+}
+.infoImg{
+    width: 270;
+    height: 208;
+    border-radius: 10px;
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 40px;
+
+}
+.info{
+    width: 270px;
+    height: 40px;
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.infobth{
+    width: 138px;
+    height: 40px;
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #FFB36C;
+    font-size: 16px;
+    font-weight: 500;
+}

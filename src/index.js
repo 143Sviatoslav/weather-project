@@ -9,6 +9,8 @@ import Weather from './components/weatherStats/Weater';
 import Forecast from './components/forecast/Forecast';
 import Footer from './components/footer/Footer';
 import ProfileModal from './components/profileModal/ProfileModal';
+import News from './components/news/News';
+import Slider from './components/slider/Slider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +22,8 @@ root.render(
     <Card/>
     <Weather/>
     <Forecast/>
+    <News/>
+    <Slider/>
     <Footer/>
   </React.StrictMode>
 );

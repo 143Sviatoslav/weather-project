@@ -3,9 +3,9 @@ import "./news.css";
 function News (){
     return (
         <div className="infoDiv">
-            <p className="infoP"></p>
+            <p className="infoP">Interacting with our pets</p>
             <img src="" className="infoImg" />
-            <p className="info"></p>
+            <p className="info">Rescue pups pose as ghosts in festive photo shoot</p>
             <button className="infobth">see more</button>
         </div>
     )
