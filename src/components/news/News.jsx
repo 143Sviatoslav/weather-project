@@ -1,3 +1,5 @@
+import "./news.css";
+
 function News (){
     return (
         <div>

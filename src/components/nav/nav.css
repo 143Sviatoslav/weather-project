@@ -37,6 +37,7 @@ border-bottom-right-radius: 10px;
 .title{
 width: 411px;
 height: 49px;
+font-size: 40px;
 color: #FFFFFF;
 position: absolute;
 left: 514px;
@@ -45,6 +46,7 @@ top: 100px;
 .text1{
 width: 345px;
 height: 87px;
+font-size: 24px;
 color: #FFFFFF;
 position: absolute;
 left: 323px;
@@ -53,6 +55,7 @@ top: 229px;
 .text2{
 width: 164px;
 height: 58px;
+font-size: 24px;
 color: #FFFFFF;
 position: absolute;
 left: 772px;

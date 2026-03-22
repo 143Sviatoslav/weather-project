@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.modal-form-enter {
+    width: 89px;
+    height: 35px;
+    background-color: #FFB36C;
+    border-radius: 10px;
+    border: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 30px 45px 22px 45px;
+    border-radius: 25px;
+    box-sizing: content-box;
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.modal-form-title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.modal-form-enterData {
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+    background: #e4e4e4;
+    border: none;
+    padding: 12px 0px 12px 20px;
+    margin-bottom: 25px;
+}
+
+.modal-form-enterData:focus-visible {
+    outline: none;
+}
+
+.modal-form-enter {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    align-self: center;
+}
+
+.modal-change {
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 8px;
+    color: #000;
+    align-self: center;
+}
+
+.modal-form-change {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 8px;
+}

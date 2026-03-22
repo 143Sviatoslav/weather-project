@@ -4,41 +4,56 @@
     display: flex;
     background-color: #E8E8E8;
     border-radius: 20px;
-    position: relative;
-    top: 60px;
-    left: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 60px;
+    margin-left: 150px;
 }
+.ccDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
+}
 .city{
   width: 52px;
   height: 17px;  
-  position: absolute;
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 15px;
 
 }
 .country{
     width: 110px;
     height: 17px;
-    position: absolute;
+    margin: 0;
+    margin-right: 30px;
+    margin-top: 15px;
 }
-.more{
-   width: 99px;
-   height: 28px; 
-   border-radius: 10px;
-   border: 0;
-   background-color: #FFB36C;
-   position: absolute;
-   left: 134px;
-   top: 381px;
+.time{
+    width: 63px;
+    height: 29px;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 129px;
+    margin-top: 15px;
 }
+.hwDiv{
+    display: flex;
+    gap: 25px;
+
+}
+
 .hourly{
     width: 114px;
     height: 28px;
     border-radius: 10px;
     border: 0;
     background-color: #FFB36C;
-    position: absolute;
-    left: 32px;
-    top: 86px;
+    margin: 0;
+    margin-left: 32px;
+    margin-top: 10px;
 }
 .weekly{
     width: 117px;
@@ -46,60 +61,119 @@
     border-radius: 10px;
     border: 0;
     background-color: #FFB36C;
-    position: absolute;
-    left: 171px;
-    top: 86px;
+    margin: 0;
+    margin-top: 10px;
+}
+.dateDiv{
+    display: flex;
+    gap: 6px;
+}
+.dateC{
+width: 68px;
+height: 17px;
+margin: 0;
+margin-left: 79px;
+margin-top: 15px;
+
+}
+.line2{
+width: 17px;
+height: 0;
+border-color: #000000;
+}
+.weekDay{
+    
+width: 44px;
+height: 17px;
+margin: 0;
+margin-top: 15px;
+}
+.sun{
+   width: 120px;
+   height: 120px;
+   margin: 0;
+   margin-left: 100px; 
+   margin-top: 22px;
+}
+.grade{
+    width: 69px;
+    height: 39px;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 126px;
+    margin-top: 15px;
+}
+.bthDiv{
+    display: flex;
+    justify-content: center;
 }
 .return{
     width: 30px;
     height: 30px;
-    position: absolute;
-    left: 20px;
-    top: 380px;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 38px;
     display: flex;
     align-items: center;
     border: 0;
     background-color: #E8E8E8;
+    position: relative;
 }
 .like{
     width: 30px;
     height: 30px;
-    position: absolute;
-    left: 66px;
-    top: 380px;
+    margin: 0;
+    margin-left: 16px;
+    margin-top: 38px;
     display: flex;
     align-items: center;
     border: 0;
     background-color: #E8E8E8;
+    position: relative;
+}
+.more{
+   width: 99px;
+   height: 28px; 
+   border-radius: 10px;
+   border: 0;
+   background-color: #FFB36C;
+   margin: 0;
+   margin-left: 38px;
+   margin-top: 39px;
+   
 }
 .del{
     width: 30px;
     height: 30px;
-    position: absolute;
-    left: 270px;
-    top: 380px;
+    margin: 0;
+    margin-left: 37px;
+    margin-top: 38px;
     display: flex;
     align-items: center;
     border: 0;
     background-color: #E8E8E8;
+    position: relative;
 }
 .returnimg{
 
     width: 30px;
     height: 30px;
+    
     position: absolute;
-    left: 0.1px;
-   
+   left: 0.1px;
 }
 .likeimg{
     width: 30px;
     height: 30px;
     position: absolute;
     left: 0.1px;
+    
 }
 .delimg{
     width: 30px;
     height: 30px;
+    
     position: absolute;
     left: 0.1px;
 }

@@ -15,6 +15,36 @@ border-radius: 10px;
 position: absolute;
 left: 77px;
 top: 40px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.fell{
+    width: 75px;
+    height: 20px;
+    margin: 0;
+    margin-left: 108px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.degreesC{
+    width: 96px;
+    height: 39px;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 97px;
+    margin-top: 10px;
+    
+    
+}
+.cImg{
+    width: 85px;
+    height: 85px;
+    margin: 0;
+    margin-left: 103px;
+    margin-top: 23px;
 }
 .statusDivW{
 width: 290px;
@@ -24,6 +54,45 @@ border-radius: 10px;
 position: absolute;
 top: 40px;
 left: 425px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.min{
+    width: 51px;
+    height: 20px;
+    margin: 0;
+    margin-left: 120px;
+    margin-top: 20px;
+    font-style: 16px;
+    font-weight: 500;
+}
+.degreesMin{
+    width: 95px;
+    height: 39px;
+    margin: 0;
+    margin-left: 98px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.max{
+    width: 54px;
+    height: 20px;
+    margin: 0;
+    margin-left: 118px;
+    margin-top: 19px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.degreesMax{
+    width: 95px;
+    height: 39px;
+    margin: 0;
+    margin-left: 98px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
 }
 .statusDivE{
 width: 290px;
@@ -33,6 +102,35 @@ border-radius: 10px;
 position: absolute;
 top: 40px;
 left: 773px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.humidity{
+    width: 76px;
+    height: 20px;
+    margin: 0;
+    margin-left: 107px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.procents{
+    width: 66px;
+    height: 39px;
+    margin: 0;
+    margin-left: 112px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.wImg{
+    width: 85px;
+    height: 85px;
+    margin: 0;
+    margin-left: 102px;
+    margin-top: 23px;
+    
 }
 .statusDivR{
 width: 290px;
@@ -43,6 +141,32 @@ position: absolute;
 top: 297px;
 left: 77px;
 }
+.prssure{
+    width: 71px;
+    height: 20px;
+    margin: 0;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.pa{
+    width: 124px;
+    height: 39px;
+    margin: 0;
+    margin-left: 83px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.paImg{
+    width: 85px;
+    height: 85px;
+    margin: 0;
+    margin-left: 103px;
+    margin-top: 23px;
+    
+}
 .statusDivT{
 width: 290px;
 height: 217px;
@@ -52,6 +176,32 @@ position: absolute;
 top: 297px;
 left: 425px;
 }
+.windSpeed{
+    width: 98px;
+    height: 20px;
+    margin: 0;
+    margin-left: 96px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.mS{
+    width: 124px;
+    height: 39px;
+    margin: 0;
+    margin-left: 83px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.windImg{
+    width: 85px;
+    height: 85px;
+    margin: 0;
+    margin-left: 103px;
+    margin-top: 23px;
+    
+}
 .statusDivY{
 width: 290px;
 height: 217px;
@@ -60,4 +210,29 @@ border-radius: 10px;
 position: absolute;
 top: 297px;
 left: 773px;
+}
+.visibility{
+    width: 68px;
+    height: 20px;
+    margin: 0;
+    margin-left: 111px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.vision{
+    width: 162px;
+    height: 39px;
+    margin: 0;
+    margin-left: 64px;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.eyeImg{
+    width: 85px;
+    height: 85px;
+    margin: 0;
+    margin-left: 103px;
+    margin-top: 23px;
 }

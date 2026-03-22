@@ -1,0 +1,72 @@
+.footerContainer{
+    width: 1440px;
+    height: 179px;
+    background-color: #FFB36C;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+.logoF{
+width: 90px; 
+height: 62px;
+margin: 0;
+margin-left: 150px;
+margin-top: 40px;
+}
+.address{
+width: 67px;
+height: 20px;
+margin: 0;
+margin-left: 103px;
+margin-top: 40px;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+
+}
+.addressP{
+width: 92px;
+height: 45px;
+margin: 0;
+margin-left: 103px;
+margin-top: 10px;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+font-weight: 500;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.contacts{
+width: 88px;
+height: 20px;
+font-size: 16px;
+font-weight: 500;
+margin: 0;
+margin-left: 103px;
+margin-top: 40px;
+}
+.instagram{
+width: 40px;
+height: 40px;
+margin: 0;
+margin-left: 103px;
+margin-top: 10px;
+}
+.facebook{
+width: 40px;
+height: 40px;
+margin: 0;
+margin-left: 20px;
+margin-top: 10px;
+}
+.watsapp{
+width: 40px;
+height: 40px;
+margin: 0;
+margin-left: 20px;
+margin-top: 10px;
+}

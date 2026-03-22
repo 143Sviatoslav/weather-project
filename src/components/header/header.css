@@ -1,6 +1,6 @@
 .container{
     width: 1440px;
-    height: 80px;
+    height: 80px; 
     display: flex;
 }
 .logoImg{
@@ -14,8 +14,9 @@
     height: 15px;
     margin-left: 111px;
     margin-top: 32px;
+    font-style: 12px;
 }
-.contacts{
+.contactsH{
     width: 55px;
     height: 15px;
     margin-left: 42px;
