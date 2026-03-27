@@ -1,3 +1,4 @@
+
 .infoDiv{
     display: flex;
     flex-direction: column;
@@ -11,21 +12,26 @@
     margin-left: 150px;
     margin-top: 80px;
 }
-.infoImg{
-    width: 270;
-    height: 208;
-    border-radius: 10px;
-    margin: 0;
+.newsDiv{
+    display: flex;
+    gap: 20px;
     margin-left: 150px;
     margin-top: 40px;
+}
+.cardNews{
+    display: flex;
+    flex-direction: column;
+}
+.infoImg{
+    width: 270px;
+    height: 208px;
+    border-radius: 10px;
+    
 
 }
 .info{
     width: 270px;
     height: 40px;
-    margin: 0;
-    margin-left: 150px;
-    margin-top: 20px;
     font-weight: 500;
     font-size: 16px;
 }

@@ -1,5 +1,5 @@
 .container{
-    width: 1440px;
+    width: auto;
     height: 80px; 
     display: flex;
 }
