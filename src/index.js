@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header';
 import Nav from './components/nav/Nav';
 import Card from './components/weather-card/Card';
-import Weather from './components/weatherStats/Weater';
 import Forecast from './components/forecast/Forecast';
 import Footer from './components/footer/Footer';
 import ProfileModal from './components/profileModal/ProfileModal';
@@ -22,7 +21,6 @@ root.render(
     {/* <Nav/>
     <Card/> */}
     <Test/>
-    <Weather/>
     <Forecast/>
     <News/>
     <Slider/>
