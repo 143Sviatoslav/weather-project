@@ -11,6 +11,7 @@ import Footer from './components/footer/Footer';
 import ProfileModal from './components/profileModal/ProfileModal';
 import News from './components/news/News';
 import Slider from './components/slider/Slider';
+import Test from './components/testWeather/Test';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,8 +19,9 @@ root.render(
     
     <Header/>
     {/* <ProfileModal/> */}
-    <Nav/>
-    <Card/>
+    {/* <Nav/>
+    <Card/> */}
+    <Test/>
     <Weather/>
     <Forecast/>
     <News/>

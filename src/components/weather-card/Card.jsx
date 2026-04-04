@@ -4,27 +4,28 @@ import bin from "../img/bin.png";
 import refresh from "../img/refresh.png";
 import hurt from "../img/hurt.png";
 
-function Card() {
+axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5";
 
-
-    return (
-        <div className="card">
+const weatherCardUrl = ({item}) => (
+    <div className="card">
+        {item.map(({ id, temp, country, name, sunrise }) => (
+            <div key={id}>
             <div className="ccDiv">
-                <p className="city">Prague</p>
-                <p className="country">Czech Republic</p>
+                <p className="city">{name}</p>
+                <p className="country">{country}</p>
             </div>
-            <p className="time">14:00</p>
+            <p className="time">{}</p>
             <div className="hwDiv">
                 <button className="hourly">Hourly forecast</button>
                 <button className="weekly">Weekly forecast</button>
             </div>
             <div className="dateDiv">
-                <p className="dateC">13.10.2023</p>
+                <p className="dateC">{}</p>
                 <div className="line2"></div>
-                <p className="weekDay">Friday</p>
+                <p className="weekDay">{}</p>
             </div>
             <img src="" className="sun" />
-            <p className="grade">22℃</p>
+            <p className="grade">{temp}</p>
             <div className="bthDiv">
                 <button className="return">
                     <img src={refresh} className="returnimg" />
@@ -39,7 +40,16 @@ function Card() {
                     <img src={bin} className="delimg" />
                 </button>
             </div>
+            </div>
+))}
+        </div>
+)
+function Card() {
 
+ 
+    return (
+        <div>
+            <weatherCardUrl/>
         </div>
     )
 }
