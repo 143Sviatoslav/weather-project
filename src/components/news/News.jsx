@@ -2,7 +2,7 @@ import "./news.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-axios.defaults.baseURL = "https://newsapi.org/v2";
+// axios.defaults.baseURL = "https://newsapi.org/v2";
 
 const NewsList = ({ item }) => (
 
@@ -27,10 +27,10 @@ function News() {
 
     useEffect(() => {
         const Data = async () => {
-            const response = await axios.get("/everything?q=ukraine&pageSize=4&apiKey=3d623b20477b4a1793bce4cf6d726729");
+            alert('test')
+            const response = await axios.get("https://newsapi.org/v2/everything?q=ukraine&pageSize=4&apiKey=3d623b20477b4a1793bce4cf6d726729");
             console.log(response)
             setNews(response.data.articles);
-
         }
 
         Data();
@@ -39,7 +39,6 @@ function News() {
         <div className="newsContainer">
             <NewsList item={news} />
         </div>)
-
 
 }
 export default News

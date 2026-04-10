@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../nav/nav.css";
 import "../weather-card/card.css"
+import "../forecast/forecast.css"
 import bin from "../img/bin.png";
 import refresh from "../img/refresh.png";
 import hurt from "../img/hurt.png";
@@ -41,11 +42,16 @@ class Test extends Component {
     this.setState({
       error: null,
       countries: [],
+      forecastState: [],
     });
 
     const response = await axios.get(`/weather?q=${name}&units=imperial&appid=0f38d6b8a76d19067772e2bef8f89a52`);
     console.log(response)
     const data = response.data;
+
+    const { lon, lat } = data.coord;
+
+    const forecast = await axios.get(`/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=0f38d6b8a76d19067772e2bef8f89a52`);
 
     if (data.length > 10) {
       this.setState({
@@ -54,13 +60,16 @@ class Test extends Component {
       return;
     }
 
-    this.setState({ countries: [response.data] });
+    this.setState({
+      countries: [response.data],
+      forecastState: forecast.data.list,
+    });
   };
 
 
 
   renderCountryCard = ({ countrySearch }) => {
-    const { id, name, sys, dt, main, weather } = countrySearch;
+    const { id, name, sys, dt, main, weather, wind } = countrySearch;
 
 
 
@@ -100,6 +109,53 @@ class Test extends Component {
           </div>
         </div>
         {/* end section - end */}
+        {/* second section - start */}
+        <div className="statusContener">
+          <div className="statusDivQ">
+            <p className="fell">Feels like</p>
+            <p className="degreesC">{main.temp}℃</p>
+            <img src="" className="cImg" />
+          </div>
+          <div className="statusDivW">
+            <p className="min">Min ℃</p>
+            <p className="degreesMin">{main.temp_min}℃</p>
+            <p className="max">Max ℃</p>
+            <p className="degreesMax">{main.temp_max}℃</p>
+          </div>
+          <div className="statusDivE">
+            <p className="humidity">Humidity</p>
+            <p className="procents">{main.humidity}%</p>
+            <img src="" className="wImg" />
+          </div>
+          <div className="statusDivR">
+            <p className="prssure">Pressure</p>
+            <p className="pa">{main.pressure}Pa</p>
+            <img src="" className="paImg" />
+          </div>
+          <div className="statusDivT">
+            <p className="windSpeed">Wind speed</p>
+            <p className="mS">{wind.speed} m/s</p>
+            <img src="" className="windImg" />
+          </div>
+          <div className="statusDivY">
+            <p className="visibility">Visibility</p>
+            <p className="vision">Unlimited</p>
+            <img src="" className="eyeImg" />
+          </div>
+        </div>
+        {/* second section - end */}
+        {/* 3 */}
+        <div className="allDays">
+          <p className="dayforecast">8-day forecast</p>
+          <div className="oneDay">
+            <p className="date">{}</p>
+            <img src="" className="weatherImg" />
+            <p className="temperature">{}</p>
+            <p className="weather">{}</p>
+          </div>
+        </div>
+
+        {/* 3 */}
       </div>
 
     );
@@ -127,41 +183,7 @@ class Test extends Component {
         </div>
         {countries.length > 0 ? (this.renderCountryCard({ countrySearch: countries[0] })) : null}
 
-                {/* second section - start */}
-        <div className="statusContener">
-          <div className="statusDivQ">
-            <p className="fell">Feels like</p>
-            <p className="degreesC"></p>
-            <img src="" className="cImg" />
-          </div>
-          <div className="statusDivW">
-            <p className="min">Min ℃</p>
-            <p className="degreesMin">27.9℃</p>
-            <p className="max">Min ℃</p>
-            <p className="degreesMax">27.9℃</p>
-          </div>
-          <div className="statusDivE">
-            <p className="humidity">Humidity</p>
-            <p className="procents">59%</p>
-            <img src="" className="wImg" />
-          </div>
-          <div className="statusDivR">
-            <p className="prssure">Pressure</p>
-            <p className="pa">1007 Pa</p>
-            <img src="" className="paImg" />
-          </div>
-          <div className="statusDivT">
-            <p className="windSpeed">Wind speed</p>
-            <p className="mS">3.17 m/s</p>
-            <img src="" className="windImg" />
-          </div>
-          <div className="statusDivY">
-            <p className="visibility">Visibility</p>
-            <p className="vision">Unlimited</p>
-            <img src="" className="eyeImg" />
-          </div>
-        </div>
-        {/* second section - end */}
+
       </div >
     );
   }
