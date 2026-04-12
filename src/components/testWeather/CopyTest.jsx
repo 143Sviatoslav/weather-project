@@ -142,6 +142,7 @@ class Test extends Component {
           </div>
         </div>
         {/* second section - end */}
+        
         {/* 3 */}
         <div className="allDays">
           <p className="dayforecast">8-day forecast</p>
