@@ -2,44 +2,48 @@
     width: auto;
     height: 80px; 
     display: flex;
+    justify-content: space-between;
+    padding: 12px 150px;
 }
 .logoImg{
     width: 82px;
     height: 56px;
-    margin-left: 150px;
-    margin-top: 12px;
 }
 .wwa{
-    width: 77px;
-    height: 15px;
-    margin-left: 111px;
-    margin-top: 32px;
     font-style: 12px;
 }
 .contactsH{
-    width: 55px;
-    height: 15px;
-    margin-left: 42px;
-    margin-top: 32px;
+
+}
+.container-list{
+    display: flex;
+    column-gap: 42px;
+    padding: 0;
+}
+.container-account{
+    display: flex;
+    align-items: center;
+    column-gap: 27px;
+}
+.container-left{
+    display: flex;
+    align-items: center;
+    column-gap: 111px;
+}
+.container-list-item{
+    list-style: none;
 }
 .menu{
-    width: 39px;
-    height: 15px;
-    margin-left: 49px;
-    margin-top: 32px;
 }
 .signBth{
   width: 89px;
   height: 35px;  
-  margin-left: 519px;
   background-color: #FFB36C;
   border-radius: 10px;
   border: none;
-  margin-top: 22px;
 }
 .userImg{
     width: 50px;
     height: 50px;
-    margin-left: 27px;
-    margin-top: 15px;
 }
+

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const NewsList = ({ item }) => (
 
     <div className="infoDiv">
-        <p className="infoP">Interacting with our pets</p>
+        <p className="infoP">World news</p>
         <div className="newsDiv">
         {item.map(({ description, urlToImage, id }) => (
             <div className="cardNews" key={id}>
@@ -27,7 +27,6 @@ function News() {
 
     useEffect(() => {
         const Data = async () => {
-            alert('test')
             const response = await axios.get("https://newsapi.org/v2/everything?q=ukraine&pageSize=4&apiKey=3d623b20477b4a1793bce4cf6d726729");
             console.log(response)
             setNews(response.data.articles);

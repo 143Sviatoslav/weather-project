@@ -21,7 +21,6 @@ root.render(
     {/* <Nav/>
     <Card/> */}
     <Test/>
-    <Forecast/>
     <News/>
     <Slider/>
     <Footer/>

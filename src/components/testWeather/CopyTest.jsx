@@ -8,7 +8,16 @@ import refresh from "../img/refresh.png";
 import hurt from "../img/hurt.png";
 import glass from "../img/glass.png";
 import "../weatherStats/weather.css";
+import {Line} from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  lineElement,
+} from 'chart.js';
 
+ChartJS.register
 
 axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5";
 
@@ -20,22 +29,6 @@ class Test extends Component {
     error: null,
 
   };
-
-  // getdata(dt) {
-  //   return new Date(dt * 1000);
-  // }
-  // getHours(dt) {
-  //   return this.getDate(dt).getHours()
-  // }
-  // getWeekDay(dt) {
-  //   return this.getDate(dt).getDate()
-  // }
-  // getMounth(dt) {
-  //   return this.getDate(dt).getMounth()
-  // }
-
-
-
   handleSubmit = async (evt) => {
     evt.preventDefault();
 

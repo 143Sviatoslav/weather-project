@@ -17,12 +17,18 @@ function Header() {
     return(
         <header>
             <div className="container"> 
-            <img src={logo} className="logoImg"/>
-                <p className="wwa">Who we are</p>
-                <p className="contactsH">Contacts</p>
-                <p className="menu">Menu</p>
-                <button className="signBth" >Sign up</button>
-                <img src={user} className="userImg"/>
+           <div className="container-left">
+             <img src={logo} className="logoImg"/>
+                <ul className="container-list">
+                    <li className="container-list-item">Who we are</li>
+                    <li className="container-list-item">Contacts</li>
+                    <li className="container-list-item">Menu</li>
+                </ul>
+           </div>
+              <div className="container-account">
+                    <button className="signBth" >Sign up</button>
+                    <img src={user} className="userImg"/>
+              </div>
             </div>
         </header>
         
