@@ -14,10 +14,10 @@ import {
   CategoryScale,
   LinearScale,
   PointElement,
-  lineElement,
+  LineElement,
 } from 'chart.js';
 
-ChartJS.register
+ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,)
 
 axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5";
 
