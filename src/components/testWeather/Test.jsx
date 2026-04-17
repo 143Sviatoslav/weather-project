@@ -8,7 +8,9 @@ import refresh from "../img/refresh.png";
 import hurt from "../img/hurt.png";
 import glass from "../img/glass.png";
 import "../weatherStats/weather.css";
-
+import eye from "../img/eye.png";
+import pa from "../img/pa.png";
+import wind from "../img/wind.png";
 
 axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5";
 
@@ -95,7 +97,7 @@ class Test extends Component {
             <div className="line2"></div>
             <p className="weekDay">{ }</p>
           </div>
-          <img src={weather.icon} className="sun" />
+          <img src={`https://openweathermap.org/payload/api/media/file/${weather[0].icon}.png`} className="sun" />
           <p className="grade">{main.temp}F</p>
           <div className="bthDiv">
             <button className="return">
@@ -134,18 +136,18 @@ class Test extends Component {
           <div className="statusDivR">
             <p className="prssure">Pressure</p>
             <p className="pa">{main.pressure}Pa</p>
-            <img src="" className="paImg" />
+            <img src={pa} className="paImg" />
           </div>
 
           <div className="statusDivT">
             <p className="windSpeed">Wind speed</p>
             <p className="mS">{wind.speed} m/s</p>
-            <img src="" className="windImg" />
+            <img src={wind} className="windImg" />
           </div>
           <div className="statusDivY">
             <p className="visibility">Visibility</p>
             <p className="vision">Unlimited</p>
-            <img src="" className="eyeImg" />
+            <img src={eye} className="eyeImg" />
           </div>
         </div>
         {/* second section - end */}
@@ -164,7 +166,7 @@ class Test extends Component {
             return (
               <div className="oneDay">
                 <p className="date">{formattedDate}</p>
-                <img src="" className="weatherImg" />
+                <img src={`https://openweathermap.org/payload/api/media/file/${weather[0].icon}.png`} className="weatherImg" />
                 <p className="temperature">{main.temp_min}/{main.temp_min}℃</p>
                 <p className="weather">{weather[0].description}</p>
               </div>

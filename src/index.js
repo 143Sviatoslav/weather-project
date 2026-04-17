@@ -10,7 +10,8 @@ import Footer from './components/footer/Footer';
 import ProfileModal from './components/profileModal/ProfileModal';
 import News from './components/news/News';
 import Slider from './components/slider/Slider';
-import Test from './components/testWeather/Test';
+// import Test from './components/testWeather/Test';
+import CopyTest from './components/testWeather/CopyTest';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,10 +21,12 @@ root.render(
     {/* <ProfileModal/> */}
     {/* <Nav/>
     <Card/> */}
-    <Test/>
+    {/* <Test/> */}
+    <CopyTest/>
     <News/>
     <Slider/>
     <Footer/>
+    
   </React.StrictMode>
 );
 

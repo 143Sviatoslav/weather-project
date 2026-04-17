@@ -8,67 +8,50 @@ import refresh from "../img/refresh.png";
 import hurt from "../img/hurt.png";
 import glass from "../img/glass.png";
 import "../weatherStats/weather.css";
-import {Line} from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-} from 'chart.js';
+import "./dayli-forcast.css";
+import Grafic from "../Grafic/Grafic";
+import eye from "../img/eye.png";
+import pa from "../img/pa.png";
+import wind from "../img/wind.png";
 
-ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,)
 
 axios.defaults.baseURL = "https://api.openweathermap.org/data/2.5";
 
-
-class Test extends Component {
+class CopyTest extends Component {
   state = {
     countries: [],
     forecastState: [],
     error: null,
-
   };
   handleSubmit = async (evt) => {
     evt.preventDefault();
-
     const name = evt.target.elements[0].value.trim();
-
     this.setState({
       error: null,
       countries: [],
       forecastState: [],
     });
-
-    const response = await axios.get(`/weather?q=${name}&units=imperial&appid=0f38d6b8a76d19067772e2bef8f89a52`);
+    const response = await axios.get(`/weather?q=${name}&units=metric&appid=0f38d6b8a76d19067772e2bef8f89a52`);
     console.log(response.data)
     const data = response.data;
-
     const { lon, lat } = data.coord;
-
-    const forecast = await axios.get(`/forecast?lat=${lat}&lon=${lon}&cnt=8&units=imperial&appid=0f38d6b8a76d19067772e2bef8f89a52`);
+    const forecast = await axios.get(`/forecast?lat=${lat}&lon=${lon}&cnt=8&units=metric&appid=0f38d6b8a76d19067772e2bef8f89a52`);
     console.log(forecast.data.list)
-
     if (data.length > 10) {
       this.setState({
         error: "Too many matches found. Please enter a more specific query.",
       });
       return;
     }
-
     this.setState({
       countries: [response.data],
       forecastState: forecast.data.list,
-    });
+    },);
   };
-
-
 
   renderCountryCard = ({ countrySearch, forecast }) => {
     const { id, name, sys, dt, main, weather, wind } = countrySearch;
     console.log(forecast)
-
-
 
     return (
       <div className="main-container">
@@ -88,7 +71,7 @@ class Test extends Component {
             <div className="line2"></div>
             <p className="weekDay">{ }</p>
           </div>
-          <img src={weather.icon} className="sun" />
+          <img src={`https://openweathermap.org/payload/api/media/file/${weather[0].icon}.png`} className="sun" />
           <p className="grade">{main.temp}F</p>
           <div className="bthDiv">
             <button className="return">
@@ -111,7 +94,7 @@ class Test extends Component {
           <div className="statusDivQ">
             <p className="fell">Feels like</p>
             <p className="degreesC">{main.temp}℃</p>
-            <img src="" className="cImg" />
+            <img src={null} className="cImg" />
           </div>
           <div className="statusDivW">
             <p className="min">Min ℃</p>
@@ -122,27 +105,32 @@ class Test extends Component {
           <div className="statusDivE">
             <p className="humidity">Humidity</p>
             <p className="procents">{main.humidity}%</p>
-            <img src="" className="wImg" />
+            <img src={null} className="wImg" />
           </div>
           <div className="statusDivR">
             <p className="prssure">Pressure</p>
             <p className="pa">{main.pressure}Pa</p>
-            <img src="" className="paImg" />
+            <img src={pa} className="paImg" />
           </div>
 
           <div className="statusDivT">
             <p className="windSpeed">Wind speed</p>
             <p className="mS">{wind.speed} m/s</p>
-            <img src="" className="windImg" />
+            <img src={wind} className="windImg" />
           </div>
           <div className="statusDivY">
             <p className="visibility">Visibility</p>
             <p className="vision">Unlimited</p>
-            <img src="" className="eyeImg" />
+            <img src={eye} className="eyeImg" />
           </div>
         </div>
         {/* second section - end */}
-        
+        <div className="dayli-forcast-container">
+          <p className="dayli-forcast-p">Dayli Forecast</p>
+          <div className="dayli-forcast-grafic">
+            <Grafic />
+          </div>
+        </div>
         {/* 3 */}
         <div className="allDays">
           <p className="dayforecast">8-day forecast</p>
@@ -151,15 +139,15 @@ class Test extends Component {
             const date = new Date(dt * 1000)
             const formattedDate = date.toLocaleDateString('en-US', {
               weekday: 'short',
-              month: 'short',   
-              day: 'numeric'    
+              month: 'short',
+              day: 'numeric'
             });
             console.log(formattedDate)
             return (
               <div className="oneDay">
                 <p className="date">{formattedDate}</p>
-                <img src="" className="weatherImg" />
-                <p className="temperature">{main.temp_min}/{main.temp_min}℃</p>
+                <img src={`https://openweathermap.org/payload/api/media/file/${weather[0].icon}.png`} className="weatherImg" />
+                <p className="temperature">{main.temp_min}/{main.temp_max}℃</p>
                 <p className="weather">{weather[0].description}</p>
               </div>
             )
@@ -192,9 +180,10 @@ class Test extends Component {
           </div>
         </div>
         {countries.length > 0 ? (this.renderCountryCard({ countrySearch: countries[0], forecast: forecastState })) : null}
+
       </div >
     );
   }
 }
 
-export default Test;
+export default CopyTest;
